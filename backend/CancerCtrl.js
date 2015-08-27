@@ -1,6 +1,7 @@
-var Cancer = require()
+var Cancer = require('Cancer');
+var mongoose = require('mongoose');
 
-module.expports = {
+module.exports = {
 
   create: function(req, res) {
     var newCancer = new Cancer(req.body);

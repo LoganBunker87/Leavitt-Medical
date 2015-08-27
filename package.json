@@ -1,0 +1,30 @@
+{
+  "name": "wergrth",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "cors": "^2.7.1",
+    "express": "^4.13.3",
+    "mongo": "^0.1.0",
+    "mongoose": "^4.1.3",
+    "passport": "^0.3.0",
+    "passport-facebook": "^2.0.0",
+    "sessions": "0.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LoganBunker87/Leavitt-Medical.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LoganBunker87/Leavitt-Medical/issues"
+  },
+  "homepage": "https://github.com/LoganBunker87/Leavitt-Medical#readme"
+}

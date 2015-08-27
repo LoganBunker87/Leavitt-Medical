@@ -1,4 +1,5 @@
-Var mongoose = require('mongoose');
+var mongoose = require('mongoose');
+
 
 var cancerSchema = new mongoose.Schema ({
   name: { type: String }
