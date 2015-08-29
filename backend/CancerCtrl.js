@@ -1,5 +1,5 @@
-var Cancer = require('Cancer');
-var mongoose = require('mongoose');
+var Cancer = require('./Cancer');
+//var mongoose = require('mongoose');
 
 module.exports = {
 
@@ -12,7 +12,7 @@ module.exports = {
   },
 
   read: function(req, res) {
-    cancer.find(req.query)
+    Cancer.find(req.query)
     .exec(function(err, result){
       if (err) return res.status(500).send(err);
       else res.send(result);

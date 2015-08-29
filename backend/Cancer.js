@@ -2,8 +2,8 @@ var mongoose = require('mongoose');
 
 
 var cancerSchema = new mongoose.Schema ({
-  name: { type: String }
-  age: { type: Number } //do I want string or Number
+  name: { type: String },
+  age: { type: Number }, //do I want string or Number
   cancerType: {
     type: String,
     enum: [ 'skin',
@@ -16,4 +16,6 @@ var cancerSchema = new mongoose.Schema ({
             'other'
           ]
    }
-})
+});
+
+module.exports = mongoose.model('Cancer', cancerSchema);
