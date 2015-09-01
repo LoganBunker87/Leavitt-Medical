@@ -12,14 +12,15 @@ var CancerCtrl = require('./backend/CancerCtrl');
 /////////////express/////////////
 var app = express();
 /////////////middleware//////////
+app.use(express.static('Public'));
 app.use(bodyParser.json());
 app.use(cors());
 
 /////////////endpoints//////////
-app.post('/Cancer', CancerCtrl.create);
-app.get('/Cancer', CancerCtrl.read);
-app.put('/Cancer', CancerCtrl.update);
-app.delete('/Cancer', CancerCtrl.delete);
+app.post('/api/Cancer', CancerCtrl.create);
+app.get('/api/Cancer', CancerCtrl.read);
+app.put('/api/Cancer', CancerCtrl.update);
+app.delete('/api/Cancer', CancerCtrl.delete);
 ////////////connections/////////
 var port = 8001
 var mongoUri = 'mongodb://localhost:27017/LeavittMedical';

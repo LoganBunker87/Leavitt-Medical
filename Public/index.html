@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en" ng-app="LeavittMedical">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+
+
+  </head>
+  <body>
+
+    <div>
+    </div>
+    <a href="#/You">
+      <button type="button" class="familyMembers">You</button>
+    </a>
+    <a href="#/Children">
+      <button type="button" class="familyMembers">Children</button>
+    </a>
+    <a href="#/Mother">
+      <button type="button" class="familyMembers">Mother</button>
+    </a>
+    <a href="#/Father">
+      <button type="button" class="familyMembers">Father</button>
+    </a>
+    <a href="#/Siblings">
+      <button type="button" class="familyMembers">Siblings</button>
+    </a>
+    <a href="#/Misc">
+      <button type="button" class="familyMembers">Misc.</button>
+    </a>
+    <ng-view></ng-view>
+    <name-directive></name-directive>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="https://code.angularjs.org/1.4.3/angular.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-route.js"></script>
+    <script src="app.js"></script>
+    <!-- // <script src="angular-route.js"></script> -->
+    <script src="/routes/mainCtrl.js"></script>
+    <script src="/routes/mainService.js"></script>
+    <script src="/routes/Children/ChildrenCtrl.js"></script>
+    <script src="/routes/Father/FatherCtrl.js"></script>
+    <script src="/routes/Mother/MotherCtrl.js"></script>
+    <script src="/routes/Misc/MiscCtrl.js"></script>
+    <script src="/routes/Siblings/SiblingsCtrl.js"></script>
+
+    <!-- // <script src="/server.js"></script> -->
+  </body>
+</html>

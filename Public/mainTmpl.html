@@ -1,0 +1,37 @@
+<h1>main Template</h1>
+
+
+<!-- <label>Age:
+  <input type="text" name="input" ng-model="example.text"
+     ng-pattern="example.word" required ng-trim="false">
+</label> -->
+
+
+<!-- <form action="index.html" method="post">
+  <label>Name:</label>
+    <input type="text" name="input" ng-model="patient.name" /> -->
+       <!-- ng-pattern="example.word" required ng-trim="false" -->
+  <!-- <label>Age:</label> -->
+    <!-- <input type="text" name="input" ng-model="patient.age"/> -->
+       <!-- ng-pattern="example.word" required ng-trim="false" -->
+    <!-- <input type="submit" name="input" id="submit" ng-submit = "saveData()" value="submit"/> -->
+<!-- </form> -->
+
+<input placeholder="Name" type="text" ng-model="patient.name" />
+<input placeholder="Age" type="text" ng-model="patient.age" />
+<button ng-click="saveData()">Hacker Erik is a serial killer</button>
+
+<div class="dropdown">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" ng-model="patient.cancerType">Cancer Types
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li>Skin</li>
+    <li>Breast</li>
+    <li>Colon</li>
+    <li>Brain</li>
+    <li>Lymphoma</li>
+    <li>Thyroid</li>
+    <li>Prostate</li>
+    <li>Other</li>
+  </ul>
+</div>
