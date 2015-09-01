@@ -3,7 +3,13 @@ var mongoose = require('mongoose');
 
 var cancerSchema = new mongoose.Schema ({
   name: { type: String },
-  age: { type: Number }, //do I want string or Number
+  age: { type: Number },
+  sex: {
+    type: String
+    enum: ['Male',
+           'Female'
+          ]
+  },
   cancerType: {
     type: String,
     enum: [ 'Skin',
