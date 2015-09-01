@@ -1,12 +1,29 @@
 <h1>MIscTemplate</h1>
-<label>Name:
+<!-- <label>Name:
   <input type="text" name="input" ng-model="example.text"
        ng-pattern="example.word" required ng-trim="false">
 </label>
 <label>Age:
   <input type="text" name="input" ng-model="example.text"
        ng-pattern="example.word" required ng-trim="false">
-</label>
-<div>
-  hello mars
-</div>
+</label> -->
+
+<input placeholder="Name" type="text" ng-model="patient.name" />
+<input placeholder="Age" type="text" ng-model="patient.age" />
+<button ng-click="saveData()">Hacker Erik is a serial killer</button>
+
+<select ng-model="patient.cancerType">
+  <option>Skin</option>
+  <option>Breast</option>
+  <option>Colon</option>
+  <option>Brain</option>
+  <option>Lymphoma</option>
+  <option>Thyroid</option>
+  <option>Prostate</option>
+  <option>Other</option>
+</select>
+
+
+<br>
+{{cancerType}}
+</br>

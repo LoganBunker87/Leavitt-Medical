@@ -6,14 +6,14 @@ var cancerSchema = new mongoose.Schema ({
   age: { type: Number }, //do I want string or Number
   cancerType: {
     type: String,
-    enum: [ 'skin',
-            'breast',
-            'colon',
-            'brain',
-            'lymphoma',
-            'thyroid',
-            'prostate',
-            'other'
+    enum: [ 'Skin',
+            'Breast',
+            'Colon',
+            'Brain',
+            'Lymphoma',
+            'Thyroid',
+            'Prostate',
+            'Other'
           ]
    }
 });

@@ -18,17 +18,18 @@
 
 
 
-<div class="dropdown">
-  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" ng-model="patient.cancerType">Cancer Types
-  <span class="caret"></span></button>
-  <ul class="dropdown-menu">
-    <li>Skin</li>
-    <li>Breast</li>
-    <li>Colon</li>
-    <li>Brain</li>
-    <li>Lymphoma</li>
-    <li>Thyroid</li>
-    <li>Prostate</li>
-    <li>Other</li>
-  </ul>
-</div>
+<select ng-model="patient.cancerType">
+  <option>Skin</option>
+  <option>Breast</option>
+  <option>Colon</option>
+  <option>Brain</option>
+  <option>Lymphoma</option>
+  <option>Thyroid</option>
+  <option>Prostate</option>
+  <option>Other</option>
+</select>
+
+
+<br>
+{{cancerType}}
+</br>
