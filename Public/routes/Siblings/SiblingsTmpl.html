@@ -3,16 +3,46 @@
   <input type="text" name="input" ng-model="example.text"
        ng-pattern="example.word" required ng-trim="false">
 </label>
-<label>Age:
+<label>Age:s
   <input type="text" name="input" ng-model="example.text"
        ng-pattern="example.word" required ng-trim="false">
 </label> -->
 
 <div ng-repeat="(idx, sibling) in patient.siblings">
-  <div class = "form-group">
-    <input class = "form-control" placeholder="Name" type="text" ng-model="patient.sibling.name" />
-    <input class = "form-control" placeholder="Age" type="text" ng-model="patient.sibling.age" />
-    <select class = "form-control" ng-model="patient.sibling.cancerType">
+  <!-- <div class="form-group"> -->
+    <!-- <input class = "form-control" placeholder="Name" type="text" ng-model="patient.sibling.name" /> -->
+    <div layout = "column">
+      <md-content layout-padding layout = "row" layout-lg = "column">
+        <md-input-container>
+          <label>Sibling Name</label>
+          <input ng-model="sibling.name">
+        </md-input-container>
+        <md-input-container>
+          <label>Sibling Age</label>
+          <input type = "Number" ng-model="sibling.age">
+        </md-input-container>
+        <md-input-container>
+          <label>Cancer Type</label>
+          <md-select ng-model="sibling.cancerType">
+            <md-option>No Cancer</md-option>
+            <md-option>Skin</md-option>
+            <md-option>Breast</md-option>
+            <md-option>Colon</md-option>
+            <md-option>Brain</md-option>
+            <md-option>Lymphoma</md-option>
+            <md-option>Thyroid</md-option>
+            <md-option>Prostate</md-option>
+            <md-option>Other</md-option>
+          </md-select>
+        </md-input-container>
+        <md-button ng-click="removeSibling(idx)">
+          Remove Sibling
+        </md-button>
+      </md-content>
+    </div>
+
+    <!-- <input class="form-control" placeholder="Age" type="text" ng-model="patient.sibling.age" /> -->
+    <!-- <select class="form-control" ng-model="patient.sibling.cancerType">
       <option>No Cancer</option>
       <option>Skin</option>
       <option>Breast</option>
@@ -22,15 +52,22 @@
       <option>Thyroid</option>
       <option>Prostate</option>
       <option>Other</option>
-    </select>
-  </div>
+    </select> -->
+  <!-- </div> -->
 </div>
 
-<button ng-click="addSibling()">Add an irritating younger sister</button>
+<md-button ng-click="addSibling()" class="md-primary md-raised">
+  Add a Sibling
+</md-button>
+<br>
+<md-button ng-click="saveData()" class="md-accent md-hue-1" style="width: 100%">
+  Save
+</md-button>
+<!-- <button ng-click="addSibling()">Add an irritating younger sister</button> -->
 
-<button ng-click="saveData()">Hacker Erik is a serial killer or save</button>
+<!-- <button ng-click="saveData()">Hacker Erik is a serial killer or save</button> -->
 
-<select ng-model="patient.cancerType">
+<!-- <select ng-model="patient.cancerType">
   <option>Skin</option>
   <option>Breast</option>
   <option>Colon</option>
@@ -39,9 +76,8 @@
   <option>Thyroid</option>
   <option>Prostate</option>
   <option>Other</option>
-</select>
+</select> -->
 
 
-<br>
-{{cancerType}}
+<br> {{cancerType}}
 </br>

@@ -11,6 +11,11 @@ app.controller('SiblingsCtrl', function($scope, $routeParams, mainService){
 
   $scope.addSibling = function(idx){
     $scope.patient.siblings.push({});
+    console.log(idx)
+  }
+
+  $scope.removeSibling = function(idx){
+    $scope.patient.siblings.splice(idx, 1);
   }
 
   $scope.saveData = function(){

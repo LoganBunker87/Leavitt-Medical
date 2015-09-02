@@ -1,25 +1,72 @@
-<h1>main Template</h1>
+<md-tabs>
+  <md-tab label="Personal">
+    <!-- Patient Info -->
+    <div class="md-display-1">Patient Info</div>
+    <input placeholder="Name" type="text" ng-model="patient.name" />
+    <input placeholder="Age" type="text" ng-model="patient.age" />
+    <button ng-click="saveData()">Hacker Erik is a serial killer</button>
+  </md-tab>
+  <md-tab label="Parents">
+    YOur Parents love you very much
+  </md-tab>
+  <md-tab label="Siblings">
+    <div ng-repeat="(idx, sibling) in patient.siblings">
+        <div layout = "column">
+          <md-content layout-padding layout = "row" layout-lg = "column">
+            <md-input-container>
+              <label>Sibling Name</label>
+              <input ng-model="sibling.name">
+            </md-input-container>
+            <md-input-container>
+              <label>Sibling Age</label>
+              <input type = "Number" ng-model="sibling.age">
+            </md-input-container>
+            <md-input-container>
+              <label>Cancer Type</label>
+              <md-select ng-model="sibling.cancerType">
+                <md-option>No Cancer</md-option>
+                <md-option>Skin</md-option>
+                <md-option>Breast</md-option>
+                <md-option>Colon</md-option>
+                <md-option>Brain</md-option>
+                <md-option>Lymphoma</md-option>
+                <md-option>Thyroid</md-option>
+                <md-option>Prostate</md-option>
+                <md-option>Other</md-option>
+              </md-select>
+            </md-input-container>
+            <md-button ng-click="removeSibling(idx)">
+              Remove Sibling
+            </md-button>
+          </md-content>
+        </div>
+    </div>
+  <md-button ng-click="addSibling()" class="md-primary md-raised">
+    Add a Sibling
+  </md-button>
+  </md-tab>
+  <md-tab label="poop">
+    poo poo
+  </md-tab>
+  <md-tab label="fartz">
+    fart-mania jubilee
+  </md-tab>
+</md-tabs>
 
 
-<!-- <label>Age:
-  <input type="text" name="input" ng-model="example.text"
-     ng-pattern="example.word" required ng-trim="false">
-</label> -->
 
+<!-- Children -->
 
-<!-- <form action="index.html" method="post">
-  <label>Name:</label>
-    <input type="text" name="input" ng-model="patient.name" /> -->
-       <!-- ng-pattern="example.word" required ng-trim="false" -->
-  <!-- <label>Age:</label> -->
-    <!-- <input type="text" name="input" ng-model="patient.age"/> -->
-       <!-- ng-pattern="example.word" required ng-trim="false" -->
-    <!-- <input type="submit" name="input" id="submit" ng-submit = "saveData()" value="submit"/> -->
-<!-- </form> -->
+<md-button ng-click="saveData()" class="md-accent md-hue-1" style="width: 100%">
+  Save
+</md-button>
+<!-- Mother -->
 
-<input placeholder="Name" type="text" ng-model="patient.name" />
-<input placeholder="Age" type="text" ng-model="patient.age" />
-<button ng-click="saveData()">Hacker Erik is a serial killer</button>
+<!-- Father -->
+
+<!-- Siblings -->
+
+<!-- Misc. -->
 
 
 <select ng-model="patient.cancerType">

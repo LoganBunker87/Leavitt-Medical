@@ -1,5 +1,29 @@
-var app = angular.module('LeavittMedical', ['ngRoute']);
-  app.config(function($routeProvider){
+var app = angular.module('LeavittMedical', ['ngRoute', 'ngMaterial', 'ngAnimate']);
+  app.config(function($routeProvider, $mdThemingProvider){
+
+    $mdThemingProvider.theme('default')
+        .primaryPalette('red', {
+            'hue-1' : '300',
+            'hue-2' : '200',
+            'hue-3' : '50'
+        })
+
+        .accentPalette('purple', {
+            'default' : '400',
+            'hue-1'   : '300',
+            'hue-2'   : '200',
+            'hue-3'   : '50'
+        })
+
+        // .backgroundPalette('light-green', {
+        //     'default' : '50',
+        //     'hue-1'   : '300',
+        //     'hue-2'   : '200',
+        //     'hue-3'   : '50'
+        // })
+
+
+
     $routeProvider
       .when('/', {
         templateUrl: 'mainTmpl.html',

@@ -1,13 +1,20 @@
 app.controller('mainCtrl', function($scope, mainService) {
-  // $scope.getName = function(){
-  //   $scope.name = mainService.getName();
-  // };
-  // $scope.getName();
-  
 
-  console.log('hacker erik is a lamebot');
+  $scope.patient;
 
+  mainService.getUser("55e622161a14d7c939249c53")
+    .then(function(response){
+      $scope.patient = angular.copy(response);
+      console.log($scope.patient)
+      if(!$scope.patient.siblings) $scope.patient.siblings = [];
+    })
 
+  $scope.addSibling = function(idx){
+    $scope.patient.siblings.push({});
+  }
+  $scope.removeSibling = function(idx){
+    $scope.patient.siblings.splice(idx, 1);
+  }
   $scope.saveData = function(){
     console.log($scope.patient)
     mainService.saveData($scope.patient)
@@ -16,7 +23,5 @@ app.controller('mainCtrl', function($scope, mainService) {
       console.log(dataFromService);
     })
   }
-
-  // $scope.saveData();
 
 });
