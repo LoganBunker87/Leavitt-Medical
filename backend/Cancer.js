@@ -5,7 +5,7 @@ var cancerSchema = new mongoose.Schema ({
   name: { type: String },
   age: { type: Number },
   sex: {
-    type: String
+    type: String,
     enum: ['Male',
            'Female'
           ]

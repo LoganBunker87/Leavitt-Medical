@@ -3,6 +3,7 @@ app.controller('mainCtrl', function($scope, mainService) {
   //   $scope.name = mainService.getName();
   // };
   // $scope.getName();
+  
 
   console.log('hacker erik is a lamebot');
 

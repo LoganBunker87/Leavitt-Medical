@@ -8,9 +8,27 @@
        ng-pattern="example.word" required ng-trim="false">
 </label> -->
 
-<input placeholder="Name" type="text" ng-model="patient.name" />
-<input placeholder="Age" type="text" ng-model="patient.age" />
-<button ng-click="saveData()">Hacker Erik is a serial killer</button>
+<div ng-repeat="(idx, sibling) in patient.siblings">
+  <div class = "form-group">
+    <input class = "form-control" placeholder="Name" type="text" ng-model="patient.sibling.name" />
+    <input class = "form-control" placeholder="Age" type="text" ng-model="patient.sibling.age" />
+    <select class = "form-control" ng-model="patient.sibling.cancerType">
+      <option>No Cancer</option>
+      <option>Skin</option>
+      <option>Breast</option>
+      <option>Colon</option>
+      <option>Brain</option>
+      <option>Lymphoma</option>
+      <option>Thyroid</option>
+      <option>Prostate</option>
+      <option>Other</option>
+    </select>
+  </div>
+</div>
+
+<button ng-click="addSibling()">Add an irritating younger sister</button>
+
+<button ng-click="saveData()">Hacker Erik is a serial killer or save</button>
 
 <select ng-model="patient.cancerType">
   <option>Skin</option>
