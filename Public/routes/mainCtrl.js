@@ -9,6 +9,14 @@ app.controller('mainCtrl', function($scope, mainService) {
       if(!$scope.patient.siblings) $scope.patient.siblings = [];
     })
 
+  $scope.Cancers = [
+    {type: 'Brain'},
+    {type: 'Lymphoma'},
+    {type: 'Breast'},
+    {type: 'Skin'},
+    {type: 'Colon'}
+  ]
+
   $scope.addSibling = function(idx){
     $scope.patient.siblings.push({});
   }
