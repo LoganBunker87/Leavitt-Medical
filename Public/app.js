@@ -2,13 +2,13 @@ var app = angular.module('LeavittMedical', ['ngRoute', 'ngMaterial', 'ngAnimate'
   app.config(function($routeProvider, $mdThemingProvider){
 
     $mdThemingProvider.theme('default')
-        .primaryPalette('green', {
+        .primaryPalette('blue', {
             'hue-1' : '300',
             'hue-2' : '200',
             'hue-3' : '50'
         })
 
-        .accentPalette('orange', {
+        .accentPalette('green', {
             'default' : '400',
             'hue-1'   : '300',
             'hue-2'   : '200',

@@ -1,0 +1,8 @@
+ng-view {
+  height: 100% !important;
+}
+
+
+.save-button {
+  margin-bottom: 0 !important;
+}

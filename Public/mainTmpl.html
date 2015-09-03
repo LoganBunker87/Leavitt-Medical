@@ -1,7 +1,8 @@
 
-
+<img src="LeavittMedicalPhoto.jpg"/>
 
 <md-tabs>
+
   <md-tab label="Personal">
     <!-- Patient Info -->
     <md-input-container>
@@ -28,8 +29,8 @@
 
   <md-tab label="Parents">
         <!-- <div ng-repeat="(idx, parent) in patient.parent"> -->
-            <div layout = "column">>
-          <md-content layout-padding layout = "row" layout-lg = "column">
+            <div>>
+          <md-content>
             <md-input-container>
               <label>Parent Name</label>
               <input ng-model="parent.name">
@@ -60,8 +61,8 @@
 
   <md-tab label="Siblings">
     <div ng-repeat="(idx, sibling) in patient.siblings">
-        <div layout = "column">
-          <md-content layout-padding layout = "row" layout-lg = "column">
+        <div>
+          <md-content>
             <md-input-container>
               <label>Sibling Name</label>
               <input ng-model="sibling.name">
@@ -91,8 +92,8 @@
 
   <md-tab label="Children">
     <div ng-repeat="(idx, child) in patient.child">
-        <div layout = "column">
-          <md-content layout-padding layout = "row" layout-lg = "column">
+        <div>
+          <md-content>
             <md-input-container>
               <label>Child Name</label>
               <input ng-model="child.name">
@@ -122,8 +123,8 @@
 
   <md-tab label="Extended">
     <div ng-repeat="(idx, relative) in patient.relative">
-        <div layout = "column">
-          <md-content layout-padding layout = "row" layout-lg = "column">
+        <div>
+          <md-content>
             <md-input-container>
               <label>Relative Name</label>
               <input ng-model="relative.name">
@@ -154,7 +155,7 @@
 
 <!-- Children -->
 
-<md-button ng-click="saveData()" class="md-accent md-hue-1" style="width: 100%">
+<md-button ng-click="saveData()" class="md-accent md-hue-1" style="width: 100%; margin-bottom: 0;">
   Save
 </md-button>
 <!-- Mother -->
