@@ -6,7 +6,7 @@ var cancerSchema = new mongoose.Schema ({
   age: { type: Number },
   sex: {
     type: String,
-    enum: ['Male',
+    enum: ['Male', //////make capital or lowercase options available 
            'Female'
           ]
   },

@@ -12,6 +12,11 @@ app.controller('mainCtrl', function($scope, mainService) {
 
     })
 
+  $scope.sex = [
+    {type: 'Male'},
+    {type: 'Female'},
+  ]
+
   $scope.Cancers = [
     {type: ''},
     {type: 'Brain'},

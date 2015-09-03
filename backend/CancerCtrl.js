@@ -6,16 +6,26 @@ module.exports = {
   create: function(req, res) {
     var newCancer = new Cancer(req.body);
     newCancer.save(function(err, result){
-      if (err) return res.status(500).send(err);
-      else res.send(result);
+      if (err) {
+        return res.status(500).send(err);
+      }
+      else {
+        console.log(result);
+        res.send(result);
+      }
     });
   },
 
   read: function(req, res) {
     Cancer.find(req.query)
     .exec(function(err, result){
-      if (err) return res.status(500).send(err);
-      else res.send(result);
+      if (err) {
+        return res.status(500).send(err);
+      }
+      else {
+        console.log(result);
+        res.send(result);
+      }
     });
   },
 

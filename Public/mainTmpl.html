@@ -14,6 +14,12 @@
       <input type = "Number" ng-model="personal.age">
     </md-input-container>
     <md-input-container>
+      <label>Gender</label>
+      <md-select ng-model="personal.sex">
+        <md-option ng-repeat = 'Gender in sex' ng-value="Gender.type">{{Gender.type}}</md-option>
+      </md-select>
+    </md-input-container>
+    <md-input-container>
       <label>Cancer Type</label>
       <md-select ng-model="personal.cancerType">
         <md-option ng-repeat = 'Cancer in Cancers' ng-value="Cancer.type">{{Cancer.type}}</md-option>
@@ -40,6 +46,12 @@
               <input type = "Number" ng-model="parent.age">
             </md-input-container>
             <md-input-container>
+              <md-input-container>
+                <label>Gender</label>
+                <md-select ng-model="personal.sex">
+                  <md-option ng-repeat = 'Gender in sex' ng-value="Gender.type">{{Gender.type}}</md-option>
+                </md-select>
+              </md-input-container>
               <label>Cancer Type</label>
               <md-select ng-model="parent.cancerType">
                 <md-option ng-repeat = 'Cancer in Cancers' ng-value="Cancer.type">{{Cancer.type}}</md-option>

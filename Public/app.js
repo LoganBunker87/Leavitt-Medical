@@ -2,7 +2,7 @@ var app = angular.module('LeavittMedical', ['ngRoute', 'ngMaterial', 'ngAnimate'
   app.config(function($routeProvider, $mdThemingProvider){
 
     $mdThemingProvider.theme('default')
-        .primaryPalette('blue', {
+          .primaryPalette('blue', {
             'hue-1' : '300',
             'hue-2' : '200',
             'hue-3' : '50'
