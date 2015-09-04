@@ -2,14 +2,21 @@ app.controller('mainCtrl', function($scope, mainService) {
 
   $scope.patient;
 
-  mainService.getUser("55e622161a14d7c939249c53")
+  // if(!$scope.patient.siblings) $scope.patient.siblings = [];
+  // if(!$scope.patient.child) $scope.patient.child = [];
+  // if(!$scope.patient.relative) $scope.patient.relative = [];
+  // if(!$scope.patient.parent) $scope.patient.parent = [];
+
+
+
+  mainService.getUser()
     .then(function(response){
       $scope.patient = angular.copy(response);
       console.log($scope.patient)
       if(!$scope.patient.siblings) $scope.patient.siblings = [];
       if(!$scope.patient.child) $scope.patient.child = [];
       if(!$scope.patient.relative) $scope.patient.relative = [];
-
+      if(!$scope.patient.parent) $scope.patient.parent = [];
     })
 
   $scope.sex = [
@@ -64,12 +71,12 @@ app.controller('mainCtrl', function($scope, mainService) {
 
 
   $scope.saveData = function(){
-    console.log($scope.patient)
-    mainService.saveData($scope.patient)
-      .then(function(dataFromService){
-      // $scope.---- = dataFromService;
-      console.log(dataFromService);
-    })
+    console.log($scope.personal)
+    // mainService.saveData($scope.personal)
+    //   .then(function(dataFromService){
+    //   // $scope.---- = dataFromService;
+    //   console.log(dataFromService);
+    // })
   }
 
 });
