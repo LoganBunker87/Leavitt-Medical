@@ -26,12 +26,20 @@ var app = angular.module('LeavittMedical', ['ngRoute', 'ngMaterial', 'ngAnimate'
 
     $routeProvider
       .when('/', {
-        templateUrl: 'mainTmpl.html',
-        controller: "mainCtrl"
+        templateUrl: '/routes/mainTmpl.html',
+        controller: "mainCtrl",
+        resolve: {
+          patients: function(mainService){
+            return mainService.getUsers();
+          }
+        }
       })
-      .when('/Children', {
-        templateUrl: '/routes/Children/ChildrenTmpl.html',
-        controller: "ChildrenCtrl"
+      .when('/new-patient', {
+        templateUrl: '/routes/patientTmpl.html',
+        controller: "patientCtrl"
+      })
+      .when('/patient/:id', {
+        template: "<div>private parts</div>" // templateUrl!!!!! refer above
       })
       .when('/Father', {
         templateUrl: '/routes/Father/FatherTmpl.html',

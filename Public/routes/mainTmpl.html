@@ -1,0 +1,23 @@
+
+<img src="LeavittMedicalPhoto.jpg"/>
+
+<div ng-hide="patientSearch">
+  <md-button ng-click = "addPatient()">
+    Add Patient
+  </md-button>
+
+  <md-button ng-click = "findPatient()">
+    Find Patient
+  </md-button>
+</div>
+<div ng-show="patientSearch">
+  <md-input-container>
+    <label>Search Boiz</label>
+    <input type='text' ng-model="searchTerm">
+  </md-input-container>
+  <div ng-repeat="patient in patients | filter: searchTerm">
+    <div ng-click="selectPatient(patient._id)">{{patient.name}} {{patient.age}} {{patient.cancerType}}</div>
+  </div>
+</div>
+<!--
+{{patients}} -->

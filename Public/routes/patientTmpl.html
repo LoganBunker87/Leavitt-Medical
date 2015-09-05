@@ -1,4 +1,3 @@
-
 <img src="LeavittMedicalPhoto.jpg"/>
 
 <md-tabs>
@@ -7,21 +6,21 @@
     <!-- Patient Info -->
     <md-input-container>
       <label>Patient Name</label>
-      <input ng-model="personal.name">
+      <input ng-model="patient.personal.name">
     </md-input-container>
     <md-input-container>
       <label>Patient Age</label>
-      <input type = "Number" ng-model="personal.age">
+      <input type = "Number" ng-model="patient.personal.age">
     </md-input-container>
     <md-input-container>
       <label>Gender</label>
-      <md-select ng-model="personal.sex">
+      <md-select ng-model="patient.personal.sex">
         <md-option ng-repeat = 'Gender in sex' ng-value="Gender.type">{{Gender.type}}</md-option>
       </md-select>
     </md-input-container>
     <md-input-container>
       <label>Cancer Type</label>
-      <md-select ng-model="personal.cancerType">
+      <md-select ng-model="patient.personal.cancerType">
         <md-option ng-repeat = 'Cancer in Cancers' ng-value="Cancer.type">{{Cancer.type}}</md-option>
       </md-select>
     </md-input-container>
@@ -39,21 +38,21 @@
           <md-content>
             <md-input-container>
               <label>Parent Name</label>
-              <input ng-model="personal.parent.name">
+              <input ng-model="patient.parent.name">
             </md-input-container>
             <md-input-container>
               <label>Parent Age</label>
-              <input type = "Number" ng-model="personal.parent.age">
+              <input type = "Number" ng-model="patient.parent.age">
             </md-input-container>
             <md-input-container>
               <md-input-container>
                 <label>Gender</label>
-                <md-select ng-model="personal.parent.sex">
+                <md-select ng-model="patient.parent.sex">
                   <md-option ng-repeat = 'Gender in sex' ng-value="Gender.type">{{Gender.type}}</md-option>
                 </md-select>
               </md-input-container>
               <label>Cancer Type</label>
-              <md-select ng-model="personal.parent.cancerType">
+              <md-select ng-model="patient.parent.cancerType">
                 <md-option ng-repeat = 'Cancer in Cancers' ng-value="Cancer.type">{{Cancer.type}}</md-option>
               </md-select>
             </md-input-container>
@@ -72,27 +71,27 @@
 
 
   <md-tab label="Siblings">
-    <div ng-repeat="(idx, sibling) in patient.siblings">
+    <div ng-repeat="(idx, sibling) in patient.siblings track by $index">
         <div>
           <md-content>
             <md-input-container>
               <label>Sibling Name</label>
-              <input ng-model="personal.sibling.name">
+              <input ng-model="patient.sibling.name">
             </md-input-container>
             <md-input-container>
               <label>Sibling Age</label>
-              <input type = "Number" ng-model="personal.sibling.age">
+              <input type = "Number" ng-model="patient.sibling.age">
             </md-input-container>
             <md-input-container>
               <md-input-container>
                 <label>Gender</label>
-                <md-select ng-model="personal.sibling.sex">
+                <md-select ng-model="patient.sibling.sex">
                   <md-option ng-repeat = 'Gender in sex' ng-value="Gender.type">{{Gender.type}}</md-option>
                 </md-select>
               </md-input-container>
             <md-input-container>
               <label>Cancer Type</label>
-              <md-select ng-model="personal.sibling.cancerType">
+              <md-select ng-model="patient.sibling.cancerType">
                 <md-option ng-repeat = 'Cancer in Cancers' ng-value="Cancer.type">{{Cancer.type}}</md-option>
               </md-select>
             </md-input-container>
@@ -115,22 +114,22 @@
           <md-content>
             <md-input-container>
               <label>Child Name</label>
-              <input ng-model="personal.child.name">
+              <input ng-model="patient.child.name">
             </md-input-container>
             <md-input-container>
               <label>Child Age</label>
-              <input type = "Number" ng-model="personal.child.age">
+              <input type = "Number" ng-model="patient.child.age">
             </md-input-container>
             <md-input-container>
               <md-input-container>
                 <label>Gender</label>
-                <md-select ng-model="personal.child.sex">
+                <md-select ng-model="patient.child.sex">
                   <md-option ng-repeat = 'Gender in sex' ng-value="Gender.type">{{Gender.type}}</md-option>
                 </md-select>
               </md-input-container>
             <md-input-container>
               <label>Cancer Type</label>
-              <md-select ng-model="personal.child.cancerType">
+              <md-select ng-model="patient.child.cancerType">
                 <md-option ng-repeat = 'Cancer in Cancers' ng-value="Cancer.type">{{Cancer.type}}</md-option>
               </md-select>
             </md-input-container>
@@ -140,7 +139,7 @@
           </md-content>
         </div>
     </div>
-  <md-button ng-click="addChild()" class="md-primary md-raised">
+  <md-button ng-click="addChild(idx)" class="md-primary md-raised">
     Add a Child
   </md-button>
   </md-tab>
@@ -148,27 +147,27 @@
 
 
   <md-tab label="Extended">
-    <div ng-repeat="(idx, relative) in personal.relative">
+    <div ng-repeat="(idx, relative) in patient.relatives">
         <div>
           <md-content>
             <md-input-container>
               <label>Relative Name</label>
-              <input ng-model="personal.relative.name">
+              <input ng-model="patient.relative.name">
             </md-input-container>
             <md-input-container>
               <label>Relative Age</label>
-              <input type = "Number" ng-model="personal.relative.age">
+              <input type = "Number" ng-model="patient.relative.age">
             </md-input-container>
             <md-input-container>
               <md-input-container>
                 <label>Gender</label>
-                <md-select ng-model="personal.relative.sex">
+                <md-select ng-model="patient.relative.sex">
                   <md-option ng-repeat = 'Gender in sex' ng-value="Gender.type">{{Gender.type}}</md-option>
                 </md-select>
               </md-input-container>
             <md-input-container>
               <label>Cancer Type</label>
-              <md-select ng-model="personal.relative.cancerType">
+              <md-select ng-model="patient.relative.cancerType">
                 <md-option ng-repeat = 'Cancer in Cancers' ng-value="Cancer.type">{{Cancer.type}}</md-option>
               </md-select>
             </md-input-container>

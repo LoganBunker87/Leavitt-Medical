@@ -14,6 +14,12 @@ app.service('mainService', function($http, $q) {
 
   this.test = "hollaaaaa";
 
+  this.getUsers = function(){
+    return $http.get("/api/Cancer");
+  }
+
+
+
   this.getUser = function(id){
     return $http.get("/api/Cancer?_id=" + id);
   }
