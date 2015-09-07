@@ -3,9 +3,16 @@ app.controller('mainCtrl', function($scope, $location, mainService, patients) {
   $scope.patients = patients.data;
   console.log("patients", $scope.patients)
 
-    $scope.addPatient = function(){
-      $location.path('/new-patient')
-    }
+  // $scope.consent = consentForm.data;
+  // console.log("consentForm", $scope.consentForm)
+
+  $scope.addConsent = function(){
+    $location.path('/consent-form')
+  }
+
+    // $scope.addPatient = function(){
+    //   $location.path('/new-patient')
+    // }
 
     $scope.findPatient = function(){
       $scope.patientSearch = true;

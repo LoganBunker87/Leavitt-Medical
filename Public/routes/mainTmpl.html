@@ -2,7 +2,7 @@
 <img src="LeavittMedicalPhoto.jpg"/>
 
 <div ng-hide="patientSearch">
-  <md-button ng-click = "addPatient()">
+  <md-button ng-click = "addConsent()">
     Add Patient
   </md-button>
 
@@ -11,6 +11,7 @@
   </md-button>
 </div>
 <div ng-show="patientSearch">
+
   <md-input-container>
     <label>Search Patients</label>
     <input type='text' ng-model="searchTerm">

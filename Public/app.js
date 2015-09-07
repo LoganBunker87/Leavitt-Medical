@@ -34,12 +34,17 @@ var app = angular.module('LeavittMedical', ['ngRoute', 'ngMaterial', 'ngAnimate'
           }
         }
       })
+
+      .when ('/consent-form', {                       ///////////new consent-form//////////
+        templateUrl: '/routes/consentTmpl.html',    ////////////////////////////////////
+        controller: 'consentCtrl'                   ////////////////////////////////////
+      })
       .when('/new-patient', {
         templateUrl: '/routes/patientTmpl.html',
         controller: "patientCtrl"
       })
       .when('/patient/:id', {
-        template: "<div>private parts</div>" // templateUrl!!!!! refer above
+        template: "<div>patient information</div>" // templateUrl!!!!! refer above
       })
       .when('/Father', {
         templateUrl: '/routes/Father/FatherTmpl.html',
