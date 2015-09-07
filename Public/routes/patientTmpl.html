@@ -34,37 +34,67 @@
 
   <md-tab label="Parents">
         <!-- <div ng-repeat="(idx, parent) in patient.parent"> -->
-            <div>>
-          <md-content>
-            <md-input-container>
-              <label>Parent Name</label>
+            <div>
+          <md-content layout="colunm">
+            <md-input-container style="40%">
+              <label>Mother Name</label>
               <input ng-model="patient.parent.name">
             </md-input-container>
-            <md-input-container>
-              <label>Parent Age</label>
+
+            <md-input-container style="40%">
+              <label>Mother Age</label>
               <input type = "Number" ng-model="patient.parent.age">
             </md-input-container>
-            <md-input-container>
-              <md-input-container>
+
+            <!-- <md-input-container style="40%"> -->
+              <md-input-container style="40%">
                 <label>Gender</label>
                 <md-select ng-model="patient.parent.sex">
                   <md-option ng-repeat = 'Gender in sex' ng-value="Gender.type">{{Gender.type}}</md-option>
                 </md-select>
               </md-input-container>
+              <md-input-container>
               <label>Cancer Type</label>
               <md-select ng-model="patient.parent.cancerType">
                 <md-option ng-repeat = 'Cancer in Cancers' ng-value="Cancer.type">{{Cancer.type}}</md-option>
               </md-select>
             </md-input-container>
-            <md-button ng-click="removeParent(idx)">
+            <!-- <md-button ng-click="removeParent(idx)">
               Remove Parent
-            </md-button>
+            </md-button> -->
           </md-content>
         </div>
-    <!-- </div> -->
-  <md-button ng-click="addParent()" class="md-primary md-raised">
-    Add a Parent
-  </md-button>
+
+        <div>
+      <md-content layout="colunm">
+        <md-input-container style="40%">
+          <label>Father Name</label>
+          <input ng-model="patient.parent.name">
+        </md-input-container>
+
+        <md-input-container style="40%">
+          <label>Father Age</label>
+          <input type = "Number" ng-model="patient.parent.age">
+        </md-input-container>
+
+        <!-- <md-input-container style="40%"> -->
+          <md-input-container style="40%">
+            <label>Gender</label>
+            <md-select ng-model="patient.parent.sex">
+              <md-option ng-repeat = 'Gender in sex' ng-value="Gender.type">{{Gender.type}}</md-option>
+            </md-select>
+          </md-input-container>
+          <md-input-container>
+          <label>Cancer Type</label>
+          <md-select ng-model="patient.parent.cancerType">
+            <md-option ng-repeat = 'Cancer in Cancers' ng-value="Cancer.type">{{Cancer.type}}</md-option>
+          </md-select>
+        </md-input-container>
+        <!-- <md-button ng-click="removeParent(idx)">
+          Remove Parent
+        </md-button> -->
+      </md-content>
+    </div>
   </md-tab>
 
 
@@ -73,23 +103,28 @@
   <md-tab label="Siblings">
     <div ng-repeat="(idx, sibling) in patient.siblings track by $index">
         <div>
-          <md-content>
-            <md-input-container>
+          <md-content layout="row" layout-sm="">
+            <md-input-container style="width: 22%">
               <label>Sibling Name</label>
               <input ng-model="patient.sibling.name">
             </md-input-container>
-            <md-input-container>
+
+
+            <md-input-container style="width: 22%">
               <label>Sibling Age</label>
               <input type = "Number" ng-model="patient.sibling.age">
             </md-input-container>
-            <md-input-container>
-              <md-input-container>
+
+
+              <md-input-container style="width: 22%">
                 <label>Gender</label>
                 <md-select ng-model="patient.sibling.sex">
                   <md-option ng-repeat = 'Gender in sex' ng-value="Gender.type">{{Gender.type}}</md-option>
                 </md-select>
               </md-input-container>
-            <md-input-container>
+
+
+            <md-input-container style="width: 22%">
               <label>Cancer Type</label>
               <md-select ng-model="patient.sibling.cancerType">
                 <md-option ng-repeat = 'Cancer in Cancers' ng-value="Cancer.type">{{Cancer.type}}</md-option>
@@ -111,28 +146,33 @@
   <md-tab label="Children">
     <div ng-repeat="(idx, child) in patient.child">
         <div>
-          <md-content>
-            <md-input-container>
+          <md-content layout="row" layout-sm="row">
+
+            <md-input-container style="width:22%">
               <label>Child Name</label>
               <input ng-model="patient.child.name">
             </md-input-container>
-            <md-input-container>
+
+            <md-input-container style="width:22%">
               <label>Child Age</label>
               <input type = "Number" ng-model="patient.child.age">
             </md-input-container>
-            <md-input-container>
-              <md-input-container>
+
+
+              <md-input-container style="width:22%">
                 <label>Gender</label>
                 <md-select ng-model="patient.child.sex">
                   <md-option ng-repeat = 'Gender in sex' ng-value="Gender.type">{{Gender.type}}</md-option>
                 </md-select>
               </md-input-container>
-            <md-input-container>
+
+            <md-input-container style="width:22%">
               <label>Cancer Type</label>
               <md-select ng-model="patient.child.cancerType">
                 <md-option ng-repeat = 'Cancer in Cancers' ng-value="Cancer.type">{{Cancer.type}}</md-option>
               </md-select>
             </md-input-container>
+
             <md-button ng-click="removeChild(idx)">
               Remove Child
             </md-button>
@@ -149,23 +189,26 @@
   <md-tab label="Extended">
     <div ng-repeat="(idx, relative) in patient.relatives">
         <div>
-          <md-content>
-            <md-input-container>
+          <md-content layout="row" layout-sm="row">
+            <md-input-container style="width:22%">
               <label>Relative Name</label>
               <input ng-model="patient.relative.name">
             </md-input-container>
-            <md-input-container>
+
+            <md-input-container style="width:22%">
               <label>Relative Age</label>
               <input type = "Number" ng-model="patient.relative.age">
             </md-input-container>
-            <md-input-container>
-              <md-input-container>
+
+
+              <md-input-container style="width:22%">
                 <label>Gender</label>
                 <md-select ng-model="patient.relative.sex">
                   <md-option ng-repeat = 'Gender in sex' ng-value="Gender.type">{{Gender.type}}</md-option>
                 </md-select>
               </md-input-container>
-            <md-input-container>
+
+            <md-input-container style="width:22%">
               <label>Cancer Type</label>
               <md-select ng-model="patient.relative.cancerType">
                 <md-option ng-repeat = 'Cancer in Cancers' ng-value="Cancer.type">{{Cancer.type}}</md-option>

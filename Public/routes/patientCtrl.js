@@ -20,7 +20,7 @@ app.controller('patientCtrl', function($scope, mainService) {
         if(!$scope.patient.siblings) $scope.patient.siblings = [];
         if(!$scope.patient.child) $scope.patient.child = [];
         if(!$scope.patient.relative) $scope.patient.relative = [];
-        if(!$scope.patient.parent) $scope.patient.parent = [];
+        // if(!$scope.patient.parent) $scope.patient.parent = [];
       })
   }
 
