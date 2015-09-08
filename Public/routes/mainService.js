@@ -16,11 +16,14 @@ app.service('mainService', function($http, $q) {
 
   this.getUsers = function(){
     return $http.get("/api/Cancer");
-  }
-
-
+  };
 
   this.getUser = function(id){
     return $http.get("/api/Cancer?_id=" + id);
-  }
+  };
+
+  this.getUserByName = function(name){
+    return $http.get("/api/Cancer?personal.name=" + name)
+  };
+
 });

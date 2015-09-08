@@ -38,7 +38,7 @@ app.controller('patientCtrl', function($scope, mainService) {
     {type: 'Colon'},
     {type: 'Prostate'},
     {type: 'Thyroid'},
-    {type: 'other'}
+    {type: 'Other'}
 
   ]
 

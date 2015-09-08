@@ -6,7 +6,9 @@
     <label>Search Patients</label>
     <input type='text' ng-model="searchTerm">
   </md-input-container>
-  
+  <div ui-grid="gridOptions">
+
+  </div>
   <div ng-repeat="patient in patients | filter: searchTerm">
     <div ng-click="selectPatient(patient._id)">{{patient.personal.name}} {{patient.personal.age}} {{patient.personal.cancerType}}</div>
   </div>

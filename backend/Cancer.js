@@ -30,7 +30,7 @@ personal: {
       ]
     }
   },
-  parent: [
+  Mother: 
     {
 
       name: {
@@ -58,7 +58,36 @@ personal: {
           ]
         }
       }
-  ],
+  ,
+  Father:
+    {
+
+      name: {
+          type: String
+        },
+        age: {
+          type: Number
+        },
+        sex: {
+          type: String,
+          enum: ['Male', //////make capital or lowercase options available
+            'Female'
+          ]
+        },
+        cancerType: {
+          type: String,
+          enum: ['Skin',
+            'Breast',
+            'Colon',
+            'Brain',
+            'Lymphoma',
+            'Thyroid',
+            'Prostate',
+            'Other'
+          ]
+        }
+      },
+
   child: [
     {
 

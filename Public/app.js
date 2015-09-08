@@ -52,8 +52,14 @@ var app = angular.module('LeavittMedical', ['ngRoute', 'ngMaterial', 'ngAnimate'
         templateUrl: '/routes/patientTmpl.html',
         controller: "patientCtrl"
       })
-      .when('/patient/:id', {
-        template: "<div>patient information</div>" // templateUrl!!!!! refer above
+      .when('/patient/:name', {
+        templateUrl: "/routes/patientInfoTmpl.html", ///fer abov
+        controller: "patientInfoCtrl",
+        resolve: {
+          patient: function($route, mainService){
+            return mainService.getUserByName($route.current.params.name)
+          }
+        }
       })
       .when('/Father', {
         templateUrl: '/routes/Father/FatherTmpl.html',
