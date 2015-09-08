@@ -1,4 +1,4 @@
-var app = angular.module('LeavittMedical', ['ngRoute', 'ngMaterial', 'ngAnimate']);
+var app = angular.module('LeavittMedical', ['ngRoute', 'ngMaterial', 'ngAnimate', 'ui.grid']);
   app.config(function($routeProvider, $mdThemingProvider){
 
     $mdThemingProvider.theme('default')
@@ -38,6 +38,15 @@ var app = angular.module('LeavittMedical', ['ngRoute', 'ngMaterial', 'ngAnimate'
       .when ('/consent-form', {                       ///////////new consent-form//////////
         templateUrl: '/routes/consentTmpl.html',    ////////////////////////////////////
         controller: 'consentCtrl'                   ////////////////////////////////////
+      })
+      .when ('/new-search', {
+        templateUrl: '/routes/searchTmpl.html',
+        controller: 'searchCtrl',
+        resolve: {
+          patients: function(mainService){
+            return mainService.getUsers();
+          }
+        }
       })
       .when('/new-patient', {
         templateUrl: '/routes/patientTmpl.html',

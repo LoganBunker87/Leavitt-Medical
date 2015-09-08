@@ -15,8 +15,14 @@ app.controller('mainCtrl', function($scope, $location, mainService, patients) {
     // }
 
     $scope.findPatient = function(){
-      $scope.patientSearch = true;
+      $location.path('/new-search')
     }
+
+    // $scope.findPatient = function(){
+    //   $scope.patientSearch = true;
+    // }
+
+
     // mainService.getUsers()
     //   .then(function(data){
     //     $scope.patients = data;
